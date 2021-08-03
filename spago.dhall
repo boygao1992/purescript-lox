@@ -1,5 +1,22 @@
 { name = "purescript-lox"
-, dependencies = [ "console", "effect", "parsing", "prelude", "psci-support" ]
+, dependencies =
+  [ "aff"
+  , "arrays"
+  , "console"
+  , "control"
+  , "debugged"
+  , "effect"
+  , "either"
+  , "identity"
+  , "lists"
+  , "parsing"
+  , "prelude"
+  , "psci-support"
+  , "maybe"
+  , "strings"
+  , "unicode"
+  , "test-unit"
+  ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs", "test/**/*.purs" ]
 }

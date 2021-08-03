@@ -104,8 +104,34 @@ in  upstream
       }
 -------------------------------
 -}
+let debugged =
+      { dependencies =
+          [ "arrays"
+          , "bifunctors"
+          , "console"
+          , "datetime"
+          , "effect"
+          , "either"
+          , "enums"
+          , "lists"
+          , "ordered-collections"
+          , "prelude"
+          , "record"
+          , "strings"
+          , "tuples"
+          , "variant"
+          ]
+      , repo =
+          "https://github.com/davezuch/purescript-debugged.git"
+      , version =
+          "e4841d51562fe13f7ecca06dd2455029313a51d1"
+      }
 
 let upstream =
-      https://github.com/purescript/package-sets/releases/download/psc-0.14.1-20210506/packages.dhall sha256:d199e142515f9cc15838d8e6d724a98cd0ca776ceb426b7b36e841311643e3ef
+      https://github.com/purescript/package-sets/releases/download/psc-0.14.3-20210716/packages.dhall sha256:1f9af624ddfd5352455b7ac6df714f950d499e7e3c6504f62ff467eebd11042c
 
-in  upstream
+let additions =
+      { debugged = debugged
+      }
+
+in  upstream // additions
